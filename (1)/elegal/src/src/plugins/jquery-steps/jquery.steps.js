@@ -3,6 +3,17 @@
  * Copyright (c) 2014 Rafael Staib (http://www.jquery-steps.com)
  * Licensed under MIT http://www.opensource.org/licenses/MIT
  */
+
+// Custom function 
+function validateEmail() {
+    // Get the email input value
+    var email = $('#emailInput').val();
+
+    // Use a regular expression to check if the email is valid
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
 ;(function ($, undefined)
 {
 $.fn.extend({
@@ -277,18 +288,25 @@ function destroy(wizard, options)
  **/
 function finishStep(wizard, state)
 {
+    // Validate the email
+    var isEmailValid = validateEmail();
+
     var currentStep = wizard.find(".steps li").eq(state.currentIndex);
 
-    if (wizard.triggerHandler("finishing", [state.currentIndex]))
-    {
-        currentStep.addClass("done").removeClass("error");
-        wizard.triggerHandler("finished", [state.currentIndex]);
-    }
-    else
-    {
+    if (wizard.triggerHandler("finishing", [state.currentIndex])) {
+        if (!isEmailValid) {
+            currentStep.addClass("error");
+            wizard.triggerHandler("finished", [state.currentIndex]);
+
+        } else {
+            currentStep.addClass("done").removeClass("error");
+            wizard.triggerHandler("finished", [state.currentIndex]);
+        }
+    } else {
         currentStep.addClass("error");
     }
 }
+
 
 /**
  * Gets or creates if not exist an unique event namespace for the given wizard instance.
