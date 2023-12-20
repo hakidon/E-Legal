@@ -1,8 +1,5 @@
 // Login.js
 import React from 'react';
-import './vendors/styles/core.css';
-import './vendors/styles/icon-font.min.css';
-import './vendors/styles/style.css';
 
 // Import image files
 import deskappLogo from './vendors/images/deskapp-logo.svg';

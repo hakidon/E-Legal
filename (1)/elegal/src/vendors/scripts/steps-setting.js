@@ -1,3 +1,7 @@
+window.onload = function() {
+    alert('Script is loaded!');
+};
+
 $(".tab-wizard").steps({
 	headerTag: "h5",
 	bodyTag: "section",
