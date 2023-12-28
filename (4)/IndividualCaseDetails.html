@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Basic Page Info -->
+	<meta charset="utf-8" />
+	<title>Individual Case Page - DeskApp</title>
+
+	<!-- Add your CSS stylesheets and other dependencies here -->
+	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css" />
+	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css" />
+	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+			background: #f4f4f4; /*  */
+			color: #333; /*  */
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background: #007bff; /*  */
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+
+		header h1 {
+			font-size: 32px;
+			margin-bottom: 10px;
+		}
+
+		section {
+			background-color: #fff; /* */
+			padding: 20px;
+			margin: 20px;
+			border-radius: 8px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		form {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		input,
+		textarea {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid #ced4da;
+			border-radius: 4px;
+			box-sizing: border-box;
+			font-size: 14px;
+			color: #333;
+		}
+
+		input[type="submit"] {
+			background-color: #28a745;
+			color: #fff;
+			cursor: pointer;
+		}
+
+		.back-to-home {
+			margin-top: 20px;
+			text-align: center;
+		}
+
+		footer {
+			background: #007bff;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<!-- Header Section -->
+<header>
+	<div>
+		<h1>Individual Case Details</h1>
+	</div>
+</header>
+
+<!-- Update Section (for Paralegals only) -->
+<section>
+	<h2>Update Case Information</h2>
+	<form id="updateForm">
+		<!-- Paralegals can update case status and set dates -->
+		<label for="caseStatus">Case Status:</label>
+		<input type="text" id="caseStatus" name="caseStatus" required>
+
+		<label for="importantDates">Important Dates:</label>
+		<input type="date" id="importantDates" name="importantDates" multiple>
+
+		<!-- Paralegals and Clients can add tasks -->
+		<label for="taskDescription">Add Task:</label>
+		<textarea id="taskDescription" name="taskDescription"></textarea>
+
+		<!-- Paralegals and Clients can upload files -->
+		<label for="fileUpload">Upload File:</label>
+		<input type="file" id="fileUpload" name="fileUpload"
+			   accept="application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+
+		<!-- Submit button for updating information -->
+		<input type="submit" value="Update Information" class="btn btn-primary">
+	</form>
+</section>
+
+<!-- Back To Home Link -->
+<div class="back-to-home">
+	<a href="index.html" class="btn btn-secondary">Back To Home</a>
+</div>
+
+<!-- Footer Section -->
+<footer>
+	<p>&copy; 2023 E-Legal.</p>
+</footer>
+</body>
+</html>
