@@ -752,7 +752,7 @@ List of task for associated case
 											<div class="modal-content">
 												<div class="modal-header">
 													<h4 class="modal-title" id="myLargeModalLabel">
-														Large modal
+														Add Task
 													</h4>
 													<button
 														type="button"
@@ -764,28 +764,49 @@ List of task for associated case
 													</button>
 												</div>
 												<div class="modal-body">
-													<p>
-														Lorem ipsum dolor sit amet, consectetur adipisicing
-														elit, sed do eiusmod tempor incididunt ut labore et
-														dolore magna aliqua. Ut enim ad minim veniam, quis
-														nostrud exercitation ullamco laboris nisi ut aliquip
-														ex ea commodo consequat. Duis aute irure dolor in
-														reprehenderit in voluptate velit esse cillum dolore eu
-														fugiat nulla pariatur. Excepteur sint occaecat
-														cupidatat non proident, sunt in culpa qui officia
-														deserunt mollit anim id est laborum.
-													</p>
-													<p>
-														Lorem ipsum dolor sit amet, consectetur adipisicing
-														elit, sed do eiusmod tempor incididunt ut labore et
-														dolore magna aliqua. Ut enim ad minim veniam, quis
-														nostrud exercitation ullamco laboris nisi ut aliquip
-														ex ea commodo consequat. Duis aute irure dolor in
-														reprehenderit in voluptate velit esse cillum dolore eu
-														fugiat nulla pariatur. Excepteur sint occaecat
-														cupidatat non proident, sunt in culpa qui officia
-														deserunt mollit anim id est laborum.
-													</p>
+													<form>
+														<!-- auto increase ID -->
+														<div class="form-group row">
+															<label class="col-sm-12 col-md-2 col-form-label">ID</label>
+															<div class="col-sm-12 col-md-10">
+																<input
+																	class="form-control"
+																	type="text"
+																	placeholder="Task ID"
+																/>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-sm-12 col-md-2 col-form-label">Description</label>
+															<div class="col-sm-12 col-md-10">
+																<input
+																	class="form-control"
+																	type="text"
+																	placeholder="Task Description"
+																/>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-sm-12 col-md-2 col-form-label">Added Date</label>
+															<div class="col-sm-12 col-md-10">
+																<input
+																	class="form-control date-picker"
+																	placeholder="Select Date"
+																	type="text"
+																/>
+															</div>
+														</div>
+														<div class="form-group row">
+															<label class="col-sm-12 col-md-2 col-form-label">Due Date</label>
+															<div class="col-sm-12 col-md-10">
+																<input
+																	class="form-control date-picker"
+																	placeholder="Select Date"
+																	type="text"
+																/>
+															</div>
+														</div>
+													</form>
 												</div>
 												<div class="modal-footer">
 													<button
@@ -793,10 +814,10 @@ List of task for associated case
 														class="btn btn-secondary"
 														data-dismiss="modal"
 													>
-														Close
+														Cancel
 													</button>
 													<button type="button" class="btn btn-primary">
-														Save changes
+														Submit
 													</button>
 												</div>
 											</div>
