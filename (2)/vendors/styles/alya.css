@@ -30,7 +30,9 @@ hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0;overflow:visib
         text-decoration-skip-ink:none}address{font-style:normal;
             line-height:inherit}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dt{font-weight:700}dd{margin-bottom:.5rem;margin-left:0}blockquote,
             figure{margin:0 0 1rem}b,strong{font-weight:bolder}sub,sup{position:relative;font-size:75%;line-height:0;vertical-align:baseline}
-            sub{bottom:-.25em}sup{top:-.5em}a{color:#1b00ff;text-decoration:none;background-color:transparent}
+            sub{bottom:-.25em}sup{top:-.5em}
+            
+            a{color:#1b00ff;text-decoration:none;background-color:transparent}
             a:hover{color:#0056b3;text-decoration:none}
             a:not([href]),a:not([href]):hover{color:inherit;text-decoration:none}
             code,kbd,pre,samp{font-family:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
