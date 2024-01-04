@@ -747,7 +747,7 @@ List of task for associated case
 							<h4 class="text-blue h4">List of Tasks</h4>
 							<!-- Large modal -->
 							<div class="col-md-4 col-sm-12 mb-30">
-									<div class="modal fade bs-example-modal-lg" id="bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+									<div class="modal fade bs-example-modal-lg" id="addTaskModal" tabindex="-1" role="dialog" aria-labelledby="addTaskModalLabel" aria-hidden="true">
 										<div class="modal-dialog modal-lg modal-dialog-centered">
 											<div class="modal-content">
 												<div class="modal-header">
@@ -765,17 +765,6 @@ List of task for associated case
 												</div>
 												<div class="modal-body">
 													<form>
-														<!-- auto increase ID -->
-														<div class="form-group row">
-															<label class="col-sm-12 col-md-2 col-form-label">ID</label>
-															<div class="col-sm-12 col-md-10">
-																<input
-																	class="form-control"
-																	type="text"
-																	placeholder="Task ID"
-																/>
-															</div>
-														</div>
 														<div class="form-group row">
 															<label class="col-sm-12 col-md-2 col-form-label">Description</label>
 															<div class="col-sm-12 col-md-10">
@@ -783,16 +772,6 @@ List of task for associated case
 																	class="form-control"
 																	type="text"
 																	placeholder="Task Description"
-																/>
-															</div>
-														</div>
-														<div class="form-group row">
-															<label class="col-sm-12 col-md-2 col-form-label">Added Date</label>
-															<div class="col-sm-12 col-md-10">
-																<input
-																	class="form-control date-picker"
-																	placeholder="Select Date"
-																	type="text"
 																/>
 															</div>
 														</div>
@@ -827,7 +806,7 @@ List of task for associated case
 
 							<!-- Add Task button -->
 							<div class="text-right">
-								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bs-example-modal-lg">Add Task</button>
+								<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTaskModal">Add Task</button>
 							</div>
 
 							
@@ -863,6 +842,92 @@ List of task for associated case
 										<td>2008/10/28</td>
 										<td>2008/11/28</td>
                                         <td>
+											<div class="col-md-4 col-sm-12 mb-30">
+												<div class="modal fade bs-example-modal-lg" id="editTaskModal" tabindex="-1" role="dialog" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+													<div class="modal-dialog modal-lg modal-dialog-centered">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h4 class="modal-title" id="myLargeModalLabel">
+																	Edit Task
+																</h4>
+																<button
+																	type="button"
+																	class="close"
+																	data-dismiss="modal"
+																	aria-hidden="true"
+																>
+																	×
+																</button>
+															</div>
+															<div class="modal-body">
+																<form>
+																	<div class="form-group row">
+																		<label class="col-sm-12 col-md-2 col-form-label">Description</label>
+																		<div class="col-sm-12 col-md-10">
+																			<input
+																				class="form-control"
+																				type="text"
+																				placeholder="Task Description"
+																			/>
+																		</div>
+																	</div>
+																	<div class="form-group row">
+																		<label class="col-sm-12 col-md-2 col-form-label">Due Date</label>
+																		<div class="col-sm-12 col-md-10">
+																			<input
+																				class="form-control date-picker"
+																				placeholder="Select Date"
+																				type="text"
+																			/>
+																		</div>
+																	</div>
+																</form>
+															</div>
+															<div class="modal-footer">
+																<button
+																	type="button"
+																	class="btn btn-secondary"
+																	data-dismiss="modal"
+																>
+																	Cancel
+																</button>
+																<button type="button" class="btn btn-primary">
+																	Submit
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- Confirmation modal -->
+											<div class="col-md-4 col-sm-12 mb-30">
+												<div class="modal fade bs-example-modal-lg" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteTaskModalLabel" aria-hidden="true">
+													<div class="modal-dialog modal-lg modal-dialog-centered">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h4 class="modal-title" id="myLargeModalLabel">
+																	Delete Task
+																</h4>
+															</div>
+															<div class="modal-body">
+																Are you sure you want to delete the task?
+															</div>
+															<div class="modal-footer">
+																<button
+																	type="button"
+																	class="btn btn-secondary"
+																	data-dismiss="modal"
+																>
+																	Cancel
+																</button>
+																<button type="button" class="btn btn-danger">
+																	Delete
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 											<div class="dropdown">
 												<a
 													class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
@@ -875,13 +940,11 @@ List of task for associated case
 												<div
 													class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
 												>
-													<a class="dropdown-item" href="#"
-														><i class="dw dw-eye"></i> View</a
-													>
-													<a class="dropdown-item" href="#"
+													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editTaskModal"
 														><i class="dw dw-edit2"></i> Edit</a
 													>
-													<a class="dropdown-item" href="#"
+													
+													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"
 														><i class="dw dw-delete-3"></i> Delete</a
 													>
 												</div>
