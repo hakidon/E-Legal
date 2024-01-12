@@ -8,12 +8,35 @@
 <body>
     <div>
         <?php
-            if(DB::connection()->getPdo()){
+            try{
+                // to establish connection with database
+                $conn = new PDO("mysql:host=localhost;dbname=dummy","root","");
+                
+                // to catch & hanlde db-related exceptions
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                // to fetch query
+                $query = "SELECT * FROM cases";
+                $result = $conn->query($query);
+                
+                // to print fetched data
+                echo "connected successfully to database ".$conn->query("SELECT DATABASE()")->fetchColumn() . PHP_EOL;
+                echo "<br>";
+                foreach($result as $row){
+                    echo $row['caseID']." ".$row['caseDesc']." ".$row['caseStatus']." ".$row['assignedTo']."<br>";
+                }
+                
+            }
+            catch(PDOException $e){
+                echo "connection failed: ".$e->getMessage();
+            }
+
+            /* if(DB::connection()->getPdo()){
                 echo "connected successfully to database ".DB::connection()->getDatabaseName();
             }
             else{
                 echo "connection failed";
-            }
+            } */
         ?>
     </div>
     
