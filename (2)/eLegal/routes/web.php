@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 route::get('/case', [eLegalController::class, 'case']);
 route::get('/staff', [eLegalController::class, 'staff']);
+Route::get('/dbconn', function(){
+    return view('dbconn');
+});
