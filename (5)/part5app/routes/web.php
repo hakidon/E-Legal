@@ -23,3 +23,7 @@ Route::get('/', function () {
 route::get('/adminDashboard',[AdminDashboardController::class,'adminDashboard']);
 
 route::get('/listTask',[ListTaskController::class,'listTask']);
+
+route::get('/dbconn',function(){
+    return view('dbconn');
+});
