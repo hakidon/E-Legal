@@ -2,24 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Staff;
+use App\Models\Role;
 use Illuminate\Http\Request;
 
-class StaffController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = Staff::all();
-        return view('frontend.staff', ['staff' => $data]);
-    }
-
-    public function staff()
-    {
-        $data = Staff::with('role')->get();
-        return view('frontend.staff', ['staff' => $data]);
+        //
     }
 
     /**
@@ -41,7 +34,7 @@ class StaffController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Staff $staff)
+    public function show(Role $role)
     {
         //
     }
@@ -49,7 +42,7 @@ class StaffController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Staff $staff)
+    public function edit(Role $role)
     {
         //
     }
@@ -57,7 +50,7 @@ class StaffController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Staff $staff)
+    public function update(Request $request, Role $role)
     {
         //
     }
@@ -65,7 +58,7 @@ class StaffController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Staff $staff)
+    public function destroy(Role $role)
     {
         //
     }

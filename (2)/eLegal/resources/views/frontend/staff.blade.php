@@ -381,7 +381,9 @@
 								<td class="table-plus">{{ $row->fullname }}</td>
 								<td>{{ $row->username }}</td>
 								<td>{{ $row->email }}</td>
-								<td>{{ $row->roleID }}</td>
+
+								<!-- role is not able to be shown, might have a problem w data table reference -->
+								<td>{{ optional($row->role)->role }}</td>
 								<td>
 									<div class="dropdown">
 										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
@@ -397,7 +399,7 @@
 							</tr>
 							@endforeach				
 						</tbody>
-						
+
 					</table>
 				</div>
 				

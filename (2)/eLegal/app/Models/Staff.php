@@ -17,6 +17,10 @@ class Staff extends Model
         'username',
         'password',
         'roleID',
-        
     ];
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class, 'roleID', 'role');
+    }
 }
