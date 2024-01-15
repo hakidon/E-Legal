@@ -13,6 +13,6 @@ class Role extends Model
 
     public function staff()
     {
-        return $this->hasMany(Staff::class, 'roleID', 'role');
+        return $this->hasMany(Staff::class, 'roleID', 'roleID');
     }
 }

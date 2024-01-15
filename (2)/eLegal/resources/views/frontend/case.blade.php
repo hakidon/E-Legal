@@ -387,18 +387,21 @@
 								<th class="table-plus datatable-nosort">Added Date</th>
 								<th class="table-plus datatable-nosort">Due Date</th>
 								<th class="table-plus">Court Hearing Date</th>
+								<th class="table-plus">Assigned To</th>
 								<th class="datatable-nosort">Action</th>
 							</tr>
 						</thead>
 						
 						<tbody>
+							@foreach($case as $row)
 							<tr>
-								<td class="table-plus">CS0001</td>
-								<td>Drug Possesion</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
+								<td class="table-plus">{{ $row->caseID }}</td>
+								<td>{{ $row->caseDesc }}</td>
+								<td>{{ $row->caseStatus }}</td>
+								<td>{{ $row->cAddDate }}</td>
+								<td>{{ $row->cDueDate }}</td>
+								<td>{{ $row->cHearingDate }}</td>
+								<td>{{ $row->assignedTo }}</td>
 								<td>
 									<div class="dropdown">
 										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
@@ -412,217 +415,8 @@
 									</div>
 								</td>
 							</tr>
-
-							<tr>
-								<td class="table-plus">CS0002</td>
-								<td>Vehicle Accident</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">CS0003</td>
-								<td>Hit and Run</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">CS0004</td>
-								<td>Hit and Run</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">CS0005</td>
-								<td>Hit and Run</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">CS0006</td>
-								<td>Hit and Run</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">CS0007</td>
-								<td>Hit and Run</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">CS0008</td>
-								<td>Hit and Run</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">CS0009</td>
-								<td>Hit and Run</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">CS0010</td>
-								<td>Hit and Run</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">CS0011</td>
-								<td>Hit and Run</td>
-								<td>Ongoing</td>
-								<td>1/1/2024</td>
-								<td>20/1/2024</td>
-								<td>22/1/2024</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
+							@endforeach	
+					
 						</tbody>
 					</table>
 				</div>
