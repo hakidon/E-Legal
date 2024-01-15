@@ -376,11 +376,12 @@
 						</thead>
 						
 						<tbody>
+							@foreach($staff as $row)
 							<tr>
-								<td class="table-plus">Gloria F. Mead</td>
-								<td>gloriaFMead.EL</td>
-								<td>gloriaFMead@elegal.com</td>
-								<td>Admin</td>
+								<td class="table-plus">{{ $row->fullname }}</td>
+								<td>{{ $row->username }}</td>
+								<td>{{ $row->email }}</td>
+								<td>{{ $row->roleID }}</td>
 								<td>
 									<div class="dropdown">
 										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
@@ -394,47 +395,12 @@
 									</div>
 								</td>
 							</tr>
-
-							<tr>
-								<td class="table-plus">Andrea J. Cagle</td>
-								<td>andreaJCagle.EL</td>
-								<td>andreaJCagle@elegal.com</td>
-								<td>Staff</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-							<tr>
-								<td class="table-plus">John Doe</td>
-								<td>johnDoe.EL</td>
-								<td>johnDoe@elegal.com</td>
-								<td>Client</td>
-								<td>
-									<div class="dropdown">
-										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-										href="#" role="button" data-toggle="dropdown"><i class="dw dw-more"></i></a>
-										
-										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a class="dropdown-item" href="#"><i class="dw dw-eye"></i>View</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#editModal"><i class="dw dw-edit2"></i>Edit</a>
-											<a class="dropdown-item" href="#" data-toggle="modal" data-target="#deleteModal"><i class="dw dw-delete-3"></i>Delete</a>
-										</div>
-									</div>
-								</td>
-							</tr>
+							@endforeach				
 						</tbody>
+						
 					</table>
 				</div>
+				
 			</div>
 			
 			<!-- Footer -->

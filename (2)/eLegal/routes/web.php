@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\eLegalController;
+use App\Http\Controllers\StaffController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('staff', StaffController::class);
+
 route::get('/case', [eLegalController::class, 'case']);
-route::get('/staff', [eLegalController::class, 'staff']);
+// route::get('/staff', [StaffController::class, 'staff']);
 Route::get('/dbconn', function(){
     return view('dbconn');
 });
