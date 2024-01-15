@@ -20,4 +20,10 @@ class Cases extends Model
         'cHearingDate',
         'assignedTo',
     ];
+
+    public function staff(){
+        return $this->belongsTo(Staff::class, 'assignedTo', 'staffID');
+    }
+
 }
+

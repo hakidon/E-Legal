@@ -21,6 +21,7 @@ class Staff extends Model
 
     public function role()
     {
-        return $this->belongsTo(Role::class, 'roleID', 'role');
+        return $this->belongsTo(Role::class, 'roleID', 'roleID');
     }
+  
 }

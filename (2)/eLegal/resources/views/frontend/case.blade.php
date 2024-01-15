@@ -401,7 +401,9 @@
 								<td>{{ $row->cAddDate }}</td>
 								<td>{{ $row->cDueDate }}</td>
 								<td>{{ $row->cHearingDate }}</td>
-								<td>{{ $row->assignedTo }}</td>
+
+								<!-- [RESOLVED] fullname is not able to be shown, might have a problem w data table reference -->
+								<td>{{ optional($row->staff)->fullname }}</td>
 								<td>
 									<div class="dropdown">
 										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"

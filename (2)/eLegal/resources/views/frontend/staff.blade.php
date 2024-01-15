@@ -382,7 +382,7 @@
 								<td>{{ $row->username }}</td>
 								<td>{{ $row->email }}</td>
 
-								<!-- role is not able to be shown, might have a problem w data table reference -->
+								<!-- [RESOLVED] role is not able to be shown, might have a problem w data table reference -->
 								<td>{{ optional($row->role)->role }}</td>
 								<td>
 									<div class="dropdown">

@@ -12,6 +12,7 @@ class CasesController extends Controller
      */
     public function index()
     {
+        // $data = Cases::with('assignedTo')->get();
         $data = Cases::all();
         return view('frontend.case', ['case' => $data]);
     }
