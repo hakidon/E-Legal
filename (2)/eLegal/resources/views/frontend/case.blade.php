@@ -387,7 +387,7 @@
 								<th class="table-plus datatable-nosort">Added Date</th>
 								<th class="table-plus datatable-nosort">Due Date</th>
 								<th class="table-plus">Court Hearing Date</th>
-								<th class="table-plus">Assigned To</th>
+								<th class="table-plus datatable-nosort">Assigned To</th>
 								<th class="datatable-nosort">Action</th>
 							</tr>
 						</thead>
