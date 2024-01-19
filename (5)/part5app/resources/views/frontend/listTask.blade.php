@@ -744,6 +744,7 @@ List of task for associated case
 					<div class="card-box mb-30">
 						<div class="pd-20">
 							<h4 class="text-blue h4">List of Tasks</h4>
+							{{ $cases }}
 							<!-- Large modal -->
 							<div class="col-md-4 col-sm-12 mb-30">
 									<div class="modal fade bs-example-modal-lg" id="addTaskModal" tabindex="-1" role="dialog" aria-labelledby="addTaskModalLabel" aria-hidden="true">
