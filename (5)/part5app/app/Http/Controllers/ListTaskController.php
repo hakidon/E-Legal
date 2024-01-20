@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Cases;
+use App\Models\Tasks;
 
 class ListTaskController extends Controller
 {
     public function listTask()
     {
-        $cases = Cases::all();
-        return view('frontend.listTask', ['cases' => $cases]);
+        $tasks = Tasks::all();
+        return view('frontend.listTask', ['tasks' => $tasks]);
     }
 }

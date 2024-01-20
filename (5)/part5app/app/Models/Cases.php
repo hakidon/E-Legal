@@ -10,6 +10,6 @@ class Cases extends Model
     use HasFactory;
 
     protected $table = "case";
-    protected $fillable = ["caseDescription","caseStatus","caseAddedDate","caseDueDate","caseDueDate"];
+    protected $fillable = ["caseDescription","caseStatus","caseAddedDate","caseDueDate","caseDueDate","courtHearingDate"];
     protected $primaryKey = "caseID";
 }
